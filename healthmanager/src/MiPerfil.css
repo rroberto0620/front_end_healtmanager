@@ -1,0 +1,92 @@
+#headerFacultad{
+    margin-left: 50px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+#headerMiPerfil{
+    margin-left: 50px;
+    margin-bottom: 0px;
+    margin-top: 12px;
+}
+#divMiPerfil{
+    display: flex;
+    height: max-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+#regresarMenu{
+    background-color: black;
+}
+#cerrarSesion{
+    background-color: black;
+}
+#divListaPaciente{
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    height: max-content;
+    position: absolute;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    display:grid;
+    padding: 20px;
+    background-color: aliceblue;
+}
+#dialogUsuario{
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dialogEdad{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dialogPeso{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dialogCorreo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dialogContraseña{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#leyendas{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#divBotonesPerfil{
+    display: flex;
+    margin-left: auto;
+    margin-right: 100px;
+}
+#leyendaPublicacion{
+    margin-right: auto;
+    margin-left: 50px;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+#divider{
+    height: 2px;
+}

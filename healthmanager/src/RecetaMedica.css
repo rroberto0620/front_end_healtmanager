@@ -1,0 +1,34 @@
+.receta-medica-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .receta-medica-form{
+    display: grid;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .receta-medica-form textarea {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .receta-medica-form button {
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+  }
+  .btnsalir {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  #textArea{
+    resize: none;
+    height: 100px;
+    width: 400px;
+    align-items: center;
+  }

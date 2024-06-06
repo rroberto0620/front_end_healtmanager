@@ -1,0 +1,69 @@
+#headerSistema {
+    margin-left: 50px;
+    text-align: left;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+  }
+  #bienvenidoUsuario {
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: left;
+    font-size:larger;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  }
+  #headerFacultad{
+    margin-left: 50px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #headerPublicaciones{
+    margin-left: 120px;
+  }
+  #divPublicaciones{
+    display: flex;
+    height: max-content;
+  }
+  #divsPublicaciones{
+    width: 600px;
+    text-align:justify;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+  #boxCerrar{
+    margin-left: auto;
+    margin-right: 100px;
+  }
+  #divLista{
+    width: max-content;
+    display:grid;
+    padding: 180px;
+  }
+  #headerForm {
+    font-size: small;
+  }
+  #divBotones {
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 80px;
+    margin-left: 35px;
+  }
+  
+  #img1{
+    margin-right: 10px;
+  }
+  #img2{
+    margin-right: 10px;
+  }
+  #division{
+    width: auto;
+    height: 5px;
+    background-color: gray;
+    margin-top: 0px;
+  }

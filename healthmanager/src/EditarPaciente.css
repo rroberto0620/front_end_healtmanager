@@ -1,0 +1,34 @@
+.editar-paciente-container {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .editar-paciente-form {
+    display: grid;
+      padding: 20px;
+      align-items: center;
+  }
+  
+  .editar-paciente-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .editar-paciente-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .btnsalir {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }

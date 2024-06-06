@@ -1,0 +1,39 @@
+.h1login {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #divPrincipalLog{
+    background-image: url("https://www.meditips.com/wp-content/uploads/2017/07/AdobeStock_103968342-scaled-uai-1032x688.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 79px;
+  }
+#headerForm {
+    font-size: small;
+}
+#botonEnviar {
+    width: 350px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+#p1{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  font-style: oblique;
+}
+#p2{
+  margin-top: 20px;
+  text-align: center;
+}
+form {
+    font-family:Arial, Helvetica, sans-serif;
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px gray;
+    background-color: whitesmoke;
+  }
