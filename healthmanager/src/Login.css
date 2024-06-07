@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    padding: 79px;
+    padding: 104px;
   }
 #headerForm {
     font-size: small;
@@ -32,7 +32,7 @@ form {
     width: 400px;
     margin: 0 auto;
     padding-top: 20px;
-    height: 400px;
+    height: 350px;
     border-radius: 10px;
     box-shadow: 8px 8px 8px gray;
     background-color: whitesmoke;

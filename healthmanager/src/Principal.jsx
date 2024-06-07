@@ -56,22 +56,31 @@ function Principal(props) {
     {
       url: "https://www.meditips.com/wp-content/uploads/2019/03/recetas-medicas-1200x600-1.jpg",
       title: "Mis recetas",
-      width: "32%",
+      width: "24%",
     };
 
   const image2 =
     {
       url: "https://roianalytics.agency/wp-content/uploads/2020/09/Perfil-de-usuario.png",
       title: "Mi perfil",
-      width: "32%",
+      width: "24%",
     };
 
-  const image3 =
+    const image3 =
+    {
+      url: "https://static.vecteezy.com/system/resources/previews/003/063/231/non_2x/a-smartphone-with-a-list-of-contacts-chatting-with-friends-vector.jpg",
+      title: "Chat",
+      width: "24%",
+    };
+
+  const image4 =
     {
       url: "https://image.freepik.com/vector-gratis/hombre-saliendo-puerta_1133-32.jpg",
       title: "Cerrar sesion",
-      width: "32%",
+      width: "24%",
     };
+
+  
 
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
@@ -149,6 +158,10 @@ function Principal(props) {
     navigate("/MiPerfil");
   };
 
+  const chat = () => {
+    navigate("/Chat");
+  };
+
   return (
     <>
       <div id="divPrincipal">
@@ -158,7 +171,7 @@ function Principal(props) {
           <h1 id="bienvenidoUsuario">¡Hola {usuarioSesion}! </h1>
         </div>
         <div id="division" />
-        <div id="divBotones">
+        <div id="divBotonesPrin">
           <ImageButton id="img1" focusRipple key={image1.title} style={{width:image1.width,}} onClick={misRecetas}>
           <ImageSrc style={{ backgroundImage: `url(${image1.url})` }} />
                 <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -199,7 +212,7 @@ function Principal(props) {
                   </Typography>
                 </Image>
           </ImageButton>
-          <ImageButton id="img3" focusRipple key={image3.title} style={{width:image3.width,}} onClick={cerrarSesion}>
+          <ImageButton id="img3" focusRipple key={image3.title} style={{width:image3.width,}} onClick={chat}>
           <ImageSrc style={{ backgroundImage: `url(${image3.url})` }} />
                 <ImageBackdrop className="MuiImageBackdrop-root" />
                 <Image>
@@ -215,6 +228,26 @@ function Principal(props) {
                     }}
                   >
                     {image3.title}
+                    <ImageMarked className="MuiImageMarked-root" />
+                  </Typography>
+                </Image>
+          </ImageButton>
+          <ImageButton id="img4" focusRipple key={image4.title} style={{width:image4.width,}} onClick={cerrarSesion}>
+          <ImageSrc style={{ backgroundImage: `url(${image4.url})` }} />
+                <ImageBackdrop className="MuiImageBackdrop-root" />
+                <Image>
+                  <Typography
+                    component="span"
+                    variant="subtitle1"
+                    color="inherit"
+                    sx={{
+                      position: "relative",
+                      p: 4,
+                      pt: 2,
+                      pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
+                    }}
+                  >
+                    {image4.title}
                     <ImageMarked className="MuiImageMarked-root" />
                   </Typography>
                 </Image>

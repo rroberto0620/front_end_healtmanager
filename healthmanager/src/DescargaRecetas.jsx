@@ -72,7 +72,7 @@ function DescargaRecetas(props) {
         logo2.src = 'src/assets/firma.png';
         doc.addImage(logo2, 'JPEG', 80, camposY + 40, 45, 45);
       
-        doc.save(`Receta_${fecha}.pdf`);
+        doc.save(`Receta_${hora}.pdf`);
       };
       
     return (

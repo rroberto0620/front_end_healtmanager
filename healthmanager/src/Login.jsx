@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { Button, Box, TextField } from "@mui/material"
 import axios from "axios"
 import { useState } from "react"
@@ -21,6 +22,22 @@ function Login(props) {
             throw error
         }
     }
+
+    const esMedico = async () => {
+        const correoInput = document.getElementById("correoInput").value;
+        try {
+          const respuesta = await axios.get(
+            "http://localhost:4567/validacionMedico",
+            { params: { correo: correoInput }}
+          );
+          console.log("Entrando")
+          return respuesta.data;
+        } catch (error) {
+        console.log("Error aqui")
+          console.log(error);
+        }
+      };
+
     window.localStorage.clear();
 
     const cambiosLogin = (evento) => {
@@ -38,23 +55,30 @@ function Login(props) {
         console.log("datos recuperados en el form: ", datosLogin)
         setCargando(true)
         try {
+            const response2 = await esMedico()
+            console.log(response2.esMedico);
+            window.localStorage.setItem('esMedico',response2.esMedico);
             const response = await hacerPeticion()
+    
             setCargando(false)
             if (response.data === 'Usuario Correcto') {
-                if(response.data === 'Usuario Medico'){
+                setCargando(true)
+                if(response2.esMedico === true){
                     navigate('/MedicoPrincipal');
                     window.localStorage.setItem('Usuario',datosLogin.correo);
                     window.localStorage.setItem('Contraseña',datosLogin.contraseña)
+                    setCargando(false)
                 }else{
                 navigate('/Principal');
                 window.localStorage.setItem('Usuario',datosLogin.correo);
                 window.localStorage.setItem('Contraseña',datosLogin.contraseña)
+                setCargando(false)
                 }
             } else {
                 alert("Credenciales incorrectas, revisa tu correo o contraseña");
             }
         } catch (error) {
-            console.log("error", error)
+            console.log("error procesar login", error)
             alert("Error de envio al servidor. Intentelo de nuevo porfavor.")
             setCargando(false)
         }
@@ -75,12 +99,10 @@ function Login(props) {
                     <TextField id="contraseñaInput" label="Contraseña" variant="standard" fullWidth onChange={cambiosLogin} name="contraseña" value={datosLogin.contraseña}></TextField>
                 </Box>
                     <Button id="botonEnviar" variant="contained" type="submit" color="primary"  disabled={Cargando}>Iniciar Sesión</Button>
-
-                <p id="p2">¿Aun no tienes una cuenta? {<Link to="/Registro" className="link_SingUp">Registrarme</Link>}</p>
             </form>
             </div>
         </>
     )
 }
-
+//<p id="p2">¿Aun no tienes una cuenta? {<Link to="/Registro" className="link_SingUp">Registrarme</Link>}</p>
 export default Login

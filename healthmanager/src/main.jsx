@@ -10,11 +10,10 @@ import RegistrarPaciente from './RegistrarPaciente.jsx';
 import EditarPaciente from './EditarPaciente';
 import RecetaMedica from './RecetaMedica';
 import BuscarPaciente from './BuscarPaciente';
-import HistorialPacientes from './HistorialPacientes'
+import Chat from './Chat.jsx'
 import MiPerfilMedico from './MiPerfilMedico.jsx'
 import MisPacientes from './MisPacientes.jsx'
-import EliminarPacientes from './EliminarPacientes.jsx'
-
+import ChatMed from './ChatMed.jsx'
 
   const router = createHashRouter([
     {
@@ -52,8 +51,8 @@ import EliminarPacientes from './EliminarPacientes.jsx'
       element:<BuscarPaciente/>
     },
     {
-      path: "/HistorialPacientes",
-      element:<HistorialPacientes/>
+      path: "/Chat",
+      element:<Chat/>
     },
     {
       path: "/MiPerfil",
@@ -69,8 +68,8 @@ import EliminarPacientes from './EliminarPacientes.jsx'
       element:<MiPerfilMedico/>
     },
     {
-      path: "/EliminarPacientes",
-      element:<EliminarPacientes/>
+      path: "/ChatMed",
+      element: <ChatMed/>
     }
   ])
 

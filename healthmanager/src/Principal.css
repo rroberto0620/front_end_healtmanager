@@ -49,17 +49,21 @@
   #headerForm {
     font-size: small;
   }
-  #divBotones {
+  #divBotonesPrin {
     font-family:Arial, Helvetica, sans-serif;
-    margin-top: 80px;
-    margin-left: 35px;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   
   #img1{
-    margin-right: 10px;
+    margin-right: 5px;
   }
   #img2{
-    margin-right: 10px;
+    margin-right: 5px;
+  }
+  #img3{
+    margin-right: 5px;
   }
   #division{
     width: auto;

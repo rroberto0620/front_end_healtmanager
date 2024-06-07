@@ -24,10 +24,10 @@ function MiPerfil(props) {
 
     return (
         <>
-            <h1 id="headerFacultad">HealthManager - Mi perfil</h1>
+            <h1 id="headerFacultad">HealthManager - Mi Perfil</h1>
             <div id="division" />
             <nav id="divMiPerfil">
-                <h1 id="headerMiPerfil">Mi perfil</h1>
+                <h1 id="headerMiPerfil">Mi Perfil</h1>
                 <div id="divBotonesPerfil">
                 <Box m={1}>
                 <Button id="regresarMenu" variant="contained" type="submit" color="warning" onClick={regresarPrincipal}>Regresar al Menu</Button>
@@ -41,23 +41,23 @@ function MiPerfil(props) {
             <div id="divLeyenda">
                 <p id="leyendaPublicacion">Visualiza tus datos como Usuario, Correo y Contraseña.</p>
             </div>
-            <div id="divLista">
-                <leyend id="leyendas">Nombre</leyend>
+            <div id="divListaMedico">
+                <leyend id="leyendas2">Nombre</leyend>
                 <DialogContentText id="dialogUsuario" variant="contained" className='contenidoText'>{window.localStorage.getItem("ID")}</DialogContentText>
                 <Divider id="divider" color="black"/>
-                <leyend id="leyendas">Contacto</leyend>
+                <leyend id="leyendas2">Contacto</leyend>
                 <DialogContentText id="dialogEdad" variant="contained" className='contenidoText'>{window.localStorage.getItem("Contacto")}</DialogContentText>
                 <Divider id="divider" color="black"/>
-                <leyend id="leyendas">No. de medico sistema</leyend>
+                <leyend id="leyendas2">No. de medico sistema</leyend>
                 <DialogContentText id="dialogPeso" variant="contained" className='contenidoText'>{window.localStorage.getItem("IdMed")}</DialogContentText>
                 <Divider id="divider" color="black"/>
-                <leyend id="leyendas">Cedula profesional</leyend>
+                <leyend id="leyendas2">Cedula profesional</leyend>
                 <DialogContentText id="dialogPeso" variant="contained" className='contenidoText'>{window.localStorage.getItem("CedProf")}</DialogContentText>
                 <Divider id="divider" color="black"/>
-                <leyend id="leyendas">Correo</leyend>
+                <leyend id="leyendas2">Correo</leyend>
                 <DialogContentText id="dialogCorreo" variant="contained" className='contenidoText'>{window.localStorage.getItem("Usuario")}</DialogContentText>
                 <Divider id="divider" color="black"/>
-                <leyend id="leyendas">Contraseña</leyend>
+                <leyend id="leyendas2">Contraseña</leyend>
                 <DialogContentText id="dialogContraseña" variant="contained" className='contenidoText'>{window.localStorage.getItem("Contraseña")}</DialogContentText>
                 <Divider id="divider" color="black"/>
             </div>

@@ -66,10 +66,10 @@ function MisPacientes(props) {
       
     return (
         <>
-            <h1 id="headerFacultad">Health Manager - Mis recetas</h1>
+            <h1 id="headerFacultad">HealthManager - Mis Pacientes</h1>
             <div id="division" />
             <nav id="divPublicaciones">
-                <h1 id="headerPublicaciones">Mis pacientes</h1>
+                <h1 id="headerPublicaciones">Mis Pacientes</h1>
                 <div id="divBotonesRecetas">
                 <Box id="box1" m={0}>
                 <Button id="regresarMenu" variant="contained" type="submit" color="warning" onClick={regresarPrincipal}>Regresar al Menu</Button>

@@ -74,19 +74,20 @@ function RecetaMedica(props){
         })
     }
 
-    const generarPdf = (nombreMedico, contactoMedico, fecha) => {
+    const generarPdf = (idReceta, nombreMedico, contactoMedico, fecha) => {
+      const hora = new Date().getTime;
       const doc = new jsPDF();
       const docWidth = doc.internal.pageSize.getWidth();
     
-    //por su usamos imagen como la que viene en la imagen que me pasast
-      //const imgData = 'http://roianalytics.agency/wp-content/uploads/2020/09/Perfil-de-usuario.png';
-      //doc.addImage(imgData, 'PNG', 10, 10, 50, 15);
+      var logo = new Image();
+      logo.src = 'src/assets/medicos.png';
+      doc.addImage(logo, 'JPEG', 10, 10, 45, 45);
     
       doc.setFontSize(18);
       doc.setFont('helvetica', 'bold');
       const tituloX = 70;
       const tituloY = 15;
-      doc.text(`Receta No. 0`, tituloX, tituloY);
+      doc.text(`Receta No. ${idReceta}`, tituloX, tituloY);
     
       const lineaY = tituloY + 6;
       doc.line(tituloX - 5, lineaY, docWidth - 10, lineaY);
@@ -103,12 +104,16 @@ function RecetaMedica(props){
     
       const camposY = contenidoY + separacionLineas * 4;
       doc.setFontSize(10);
-      doc.text('Paciente:', 10, camposY);
+      doc.text('Paciente: ', 10, camposY);
       doc.text('Edad:', 60, camposY);
       doc.text('Diagnostico:', 10, camposY + 10);
       doc.text('Fecha:', 60, camposY + 10);
+
+      var logo2 = new Image();
+      logo2.src = 'src/assets/firma.png';
+      doc.addImage(logo2, 'JPEG', 80, camposY + 40, 45, 45);
     
-      doc.save(`Receta_${fecha}.pdf`);
+      doc.save(`Receta_${fecha}${hora}.pdf`);
     };
 
     const regresarPrincipal = () => {
@@ -122,7 +127,7 @@ function RecetaMedica(props){
   return (
     <>
       <div id="divPrincipal">
-      <h1 id="headerFacultad">Health Manager - Receta Medica</h1><div id="division" /><nav id="divPublicaciones">
+      <h1 id="headerFacultad">HealthManager - Receta Medica</h1><div id="division" /><nav id="divPublicaciones">
       <h1 id="headerPublicaciones">Receta medica</h1>
       <div id="divBotonesRecetas">
         <Box id="box1" m={0}>

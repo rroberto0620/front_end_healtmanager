@@ -13,7 +13,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./MedicoPrincipal.css";
 import { useNavigate } from "react-router-dom";
-import HistorialPacientes from "./HistorialPacientes";
+import Chat from "./Chat";
 function MedicoPrincipal(props) {
   const navigate = useNavigate();
   const [publicacionesData, setPublicacionesData] = useState([]);
@@ -33,7 +33,7 @@ function MedicoPrincipal(props) {
       console.log(error);
     }
   };
-
+  
   const UsuarioData = async () => {
     try {
       const respuesta = await datosUsuario();
@@ -54,7 +54,6 @@ function MedicoPrincipal(props) {
     }
   };
   UsuarioData();
-  
 
   const cerrarSesion = () => {
     navigate("/");
@@ -68,8 +67,8 @@ function MedicoPrincipal(props) {
     navigate("/MisPacientes");
   };
 
-  const historialPacientes = () => {
-    navigate("/HistorialPacientes");
+  const chat = () => {
+    navigate("/ChatMed");
   };
 
   const registrarPacientes = () => {
@@ -110,8 +109,8 @@ function MedicoPrincipal(props) {
 
   const image4 =
     {
-      url: "https://icon-library.com/images/history-icon-png/history-icon-png-29.jpg",
-      title: "Historial pacientes",
+      url: "https://static.vecteezy.com/system/resources/previews/003/063/231/non_2x/a-smartphone-with-a-list-of-contacts-chatting-with-friends-vector.jpg",
+      title: "Chat",
       width: "23%",
     };
 
@@ -138,7 +137,7 @@ function MedicoPrincipal(props) {
 
   const ImageButton = styled(ButtonBase)(({ theme }) => ({
     position: "relative",
-    height: 300,
+    height: 270,
     [theme.breakpoints.down("sm")]: {
       width: "100% !important", // Overrides inline-style
       height: 20,
@@ -203,7 +202,7 @@ function MedicoPrincipal(props) {
   return (
     <>
       <div id="divPrincipal">
-        <h1 id="headerSistema">Health Manager - Menu Principal</h1>
+        <h1 id="headerSistema">HealthManager - Menu Principal</h1>
         <div id="division" />
         <div id="divPublicaciones">
           <h1 id="bienvenidoUsuario">¡Hola Medico {usuarioSesion}! </h1>
@@ -270,7 +269,7 @@ function MedicoPrincipal(props) {
                   </Typography>
                 </Image>
           </ImageButton>
-          <ImageButton id="img4" focusRipple key={image4.title} style={{width:image4.width,}} onClick={historialPacientes}>
+          <ImageButton id="img4" focusRipple key={image4.title} style={{width:image4.width,}} onClick={chat}>
           <ImageSrc style={{ backgroundImage: `url(${image4.url})` }} />
                 <ImageBackdrop className="MuiImageBackdrop-root" />
                 <Image>
